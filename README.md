@@ -1,5 +1,36 @@
+# My dotfiles
 
-Pre-requirements:
-`sudo pacman -S stow`
-`cd ~ && gh repo clone bobudragos/.dotfiles`
-``
+This directory contains the dotfiles for my system
+
+## Requirements
+
+Ensure you have the following installed on your system
+
+### Git
+
+```
+pacman -S git
+```
+
+### Stow
+
+```
+pacman -S stow
+```
+
+## Installation
+
+First, check out the dotfiles repo in your $HOME directory using git
+
+```
+$ git clone git@github.com/bobudragos/.dotfiles.git
+$ cd .dotfiles
+```
+
+then use GNU stow to create symlinks
+
+```
+$ stow .
+```
+
+### [step-by-step tutorial](https://www.youtube.com/watch?v=y6XCebnB9gs&ab_channel=DreamsofAutonomy)
