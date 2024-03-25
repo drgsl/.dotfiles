@@ -124,6 +124,12 @@ alias cat="bat"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias df="duf"
 
+alias borsh="browsh --startup-url https://www.google.com"
+alias carbon="carbonyl https://google.com"
+
+alias chromium-term="carbon"
+alias firefox-term="borsh"
+
 alias nnn="nnn -e"
 # nnn cd on quit
 n ()
