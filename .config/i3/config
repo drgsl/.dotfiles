@@ -49,8 +49,8 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-# start kitty and run tmux inside it
-bindsym $mod+Return exec kitty tmux
+# start kitty and run tmux attach inside it (even tho kitty succeds, tmux might fail, in this case it will start a new session)
+bindsym $mod+Return exec kitty -e tmux attach || tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
