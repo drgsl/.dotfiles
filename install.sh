@@ -2,7 +2,7 @@
 ## update system packages
 sudo pacman -Syu
 ## get access to AUR
-sudo pacman -S yay
+# sudo pacman -S yay
 
 # Graphical Interface Setup
 ## i3 window manager
@@ -13,7 +13,7 @@ sudo pacman -S polybar rofi calc
 sudo pacman -S ttf-font-awesome ttf-roboto ttf-roboto-mono ttf-ubuntu-font-family
 
 # Terminal Setup
-sudo pacman -S kitty tmux nvim nnn
+sudo pacman -S kitty tmux neovim nnn
 ## improve already existing tools
 ### cd
 yay -S zoxide
@@ -37,7 +37,7 @@ yay -S btop
 
 # Development Setup
 ## git
-sudo pacman -S git gh
+sudo pacman -S git github-cli
 ## node
 sudo pacman -S nodejs npm
 ## python

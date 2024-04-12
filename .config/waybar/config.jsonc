@@ -1,0 +1,95 @@
+[{
+   "layer": "bottom",
+  "exclusive": false,
+  "position": "top",
+  "autohide": true,
+  "autohide-delay": 2000,
+  "autohide-starthidden": false,
+
+    "modules-left": ["battery"],
+    "modules-right": ["network"],
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "{ifname} ",
+        "format-disconnected": "", 
+        "max-length": 50,
+        "on-click": "kitty -e 'nmtui'"
+    },
+  //   "idle_inhibitor": {
+  //       "format": "{icon}",
+  //       "format-icons": {
+  //           "activated": "",
+  //           "deactivated": ""
+  //       },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10
+    },
+        "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    }
+
+
+
+},
+{
+  "layer": "top",
+  "exclusive": false,
+  "position": "bottom",
+  "autohide": true,
+  "autohide-delay": 2000,
+  "autohide-starthidden": false,
+
+    "modules-center": ["pulseaudio","custom/power","clock", "hyprland/workspaces"],
+
+	"custom/power": {
+		"format": " ",
+		"on-click": "swaynag -t warning -m 'Power Menu Options' -b 'Logout' 'swaymsg exit' -b 'Restart' 'shutdown -r now' -b 'Shutdown'  'shutdown -h now' --background=#005566 --button-background=#009999 --button-border=#002b33 --border-bottom=#002b33"
+	},
+    "custom/scratchpad-indicator": {
+        "format-text": "{}hi",
+        "return-type": "json",
+        "interval": 3,
+        "exec": "~/.local/bin/scratchpad-indicator 2> /dev/null",
+        "exec-if": "exit 0",
+        "on-click": "swaymsg 'scratchpad show'",
+        "on-click-right": "swaymsg 'move scratchpad'"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "0% {icon} ",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}",
+		// "on-click": "gnome-calendar"
+    }
+}]
+
