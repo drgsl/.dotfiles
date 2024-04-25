@@ -114,7 +114,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(gh copilot alias -- zsh)"
+# eval "$(gh copilot alias -- zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 # Set up fzf key bindings and fuzzy completion
 # eval "$(fzf --zsh)"
