@@ -130,6 +130,17 @@ alias carbon="carbonyl https://google.com"
 alias chromium-term="carbon"
 alias firefox-term="borsh"
 
-alias vim="nvim"
+# alias vim="nvim"
 
 alias nnn="nnn -e"
+
+
+alias apt-update='sudo pacman -Syy'
+alias apt-upgrade='sudo pacman -Syu'
+alias apt-install='sudo pacman -Sy'
+alias apt-search='sudo pacman -Ss'
+
+alias aptupdate='sudo pacman -Syy'
+alias aptupgrade='sudo pacman -Syu'
+alias aptinstall='sudo pacman -Sy'
+alias aptsearch='sudo pacman -Ss'
