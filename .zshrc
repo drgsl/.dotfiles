@@ -144,3 +144,7 @@ alias aptupdate='sudo pacman -Syy'
 alias aptupgrade='sudo pacman -Syu'
 alias aptinstall='sudo pacman -Sy'
 alias aptsearch='sudo pacman -Ss'
+
+alias lvim='~/.local/bin/lvim'
+
+
