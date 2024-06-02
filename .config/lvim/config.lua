@@ -23,3 +23,10 @@ vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 -- Centers cursor when moving 1/2 page up
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
+
+
+lvim.plugins = {
+  {
+    "tpope/vim-obsession"
+  }
+}
