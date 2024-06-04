@@ -25,8 +25,28 @@ lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 lvim.keys.normal_mode["<C-u>"] = "<C-u>zz"
 
 
+-- lvim.keys.normal_mode["<C-/>"] = "gcc<CR>"
+
+
 lvim.plugins = {
   {
     "tpope/vim-obsession"
   }
 }
+
+
+
+-- local opts = { noremap=true, silent=true }
+
+-- local function quickfix()
+--     vim.lsp.buf.code_action({
+--         filter = function(a) return a.isPreferred end,
+--         apply = true
+--     })
+-- end
+
+-- vim.keymap.set('n', '<leader>qf', quickfix, opts)
+
+
+
+

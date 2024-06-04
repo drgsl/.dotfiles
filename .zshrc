@@ -147,4 +147,35 @@ alias aptsearch='sudo pacman -Ss'
 
 alias lvim='~/.local/bin/lvim'
 
+alias csys='xclip -sel clip'
+alias psys='xclip -o -sel clip'
 
+alias c='xclip'
+alias p='xclip -o'
+
+
+alias copysys='xclip -sel clip'
+alias pastesys='xclip -o -sel clip'
+
+alias copy='xclip'
+alias paste='xclip -o'
+
+clipboard()
+{
+  if command -v xclip 1>/dev/null; then
+    if [[ -p /dev/stdin ]] ; then
+      # stdin is a pipe
+      # stdin -> clipboard
+      xclip -i -selection clipboard
+    else
+      # stdin is not a pipe
+      # clipboard -> stdout
+      xclip -o -selection clipboard
+    fi
+  else
+      echo "Remember to install xclip"
+  fi
+}
+
+alias cclip='xclip -selection clipboard'
+alias clipp='xclip -selection clipboard -o'
